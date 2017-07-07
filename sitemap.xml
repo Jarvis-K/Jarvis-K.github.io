@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://yoursite.com/guestbook/index.html</loc>
+    
+    <lastmod>2017-07-07T05:16:22.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/about/index.html</loc>
+    
+    <lastmod>2017-07-07T05:15:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/Messeage/index.html</loc>
+    
+    <lastmod>2017-07-07T05:05:58.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/07/06/MarkDown%E8%AF%AD%E6%B3%95%E8%AE%B0%E5%BD%95/</loc>
+    
+    <lastmod>2017-07-06T16:26:09.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/07/05/hello-world/</loc>
+    
+    <lastmod>2017-07-05T07:46:48.000Z</lastmod>
+    
+  </url>
+  
+</urlset>
