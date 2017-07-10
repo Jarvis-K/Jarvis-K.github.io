@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>Hello,Compiler | 欢迎加入绿灯军团</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="/css/donate.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/6.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.2/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.2/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Hello,Compiler</h1><a id="logo" href="/.">欢迎加入绿灯军团</a><p class="description"></p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/guestbook/"><i class="fa fa-comments"> 留言</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Hello,Compiler</h1><div class="post-meta">Jul 10, 2017<script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> 阅读</span></span></div><div class="clear"><div id="toc" class="toc-article"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#引言"><span class="toc-number">1.</span> <span class="toc-text">引言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#程序执行的过程"><span class="toc-number">1.1.</span> <span class="toc-text">程序执行的过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#初步了解编译的过程"><span class="toc-number">1.2.</span> <span class="toc-text">初步了解编译的过程</span></a></li></ol></li></ol></div></div><div class="post-content"><p>上学期编译原理没有通，所以暑假重拾一下编译<br><a id="more"></a></p>
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>Hello,Compiler | 欢迎加入绿灯军团</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="/css/donate.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/6.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.2/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.2/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Hello,Compiler</h1><a id="logo" href="/.">欢迎加入绿灯军团</a><p class="description"></p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/guestbook/"><i class="fa fa-comments"> 留言</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Hello,Compiler</h1><div class="post-meta">Jul 10, 2017<script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> 阅读</span></span></div><div class="clear"><div id="toc" class="toc-article"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#引言"><span class="toc-number">1.</span> <span class="toc-text">引言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#程序执行的过程"><span class="toc-number">1.1.</span> <span class="toc-text">程序执行的过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#初步了解编译的过程"><span class="toc-number">1.2.</span> <span class="toc-text">初步了解编译的过程</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#词法分析"><span class="toc-number">2.</span> <span class="toc-text">词法分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#表示词法规则"><span class="toc-number">2.1.</span> <span class="toc-text">表示词法规则</span></a></li></ol></li></ol></div></div><div class="post-content"><p>上学期编译原理没有通，所以暑假重拾一下编译<br><a id="more"></a></p>
 <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><h2 id="程序执行的过程"><a href="#程序执行的过程" class="headerlink" title="程序执行的过程"></a>程序执行的过程</h2><p>编译器是代码执行中的一个重要组件，所以首先了解一下程序执行的过程。<br>以C语言为例，我们编写的代码只是一个个文本文件，那么如何将其变为最后的可执行文件呢？  </p>
 <ol>
 <li><strong>预编译处理</strong><br>指对其中的伪指令和特殊符号进行处理<br>1)替换宏定义  eg.#define,#undef<br>2)条件编译指令 eg.#ifdef,#ifndef,#else,#elif,#endif<br>3)头文件 eg.#include “file”或者#include<file><br>4)特殊符号 eg.FILE解释为源程序名称，LINE解释为行号  </file></li>
@@ -7,8 +7,98 @@
 <li><strong>汇编过程</strong><br>将汇编代码翻译成目标机器指令的过程。目标文件一般由段组成，一个目标文件至少包括2个段：代码段(权限:rx)和数据段(权限:rwx)。  </li>
 <li><strong>链接过程</strong><br>你可能会想目标文件不是就能执行了嘛，为什么还有链接的过程，但实际上一个源文件中的函数可能引用到另一个源文件中的变量，或者引用了库函数等，所以我们需要链接程序将彼此有关联的目标文件联系起来，使成为一个能装入OS的统一整体。分为静态和动态链接两种。经过这一步就最终转换成了可执行文件</li>
 </ol>
-<h2 id="初步了解编译的过程"><a href="#初步了解编译的过程" class="headerlink" title="初步了解编译的过程"></a>初步了解编译的过程</h2><p>这篇博客参考紫龙书。过程如下图所示<br><img src="/Hello-Compiler/process.png" alt="process"></p>
-</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://yoursite.com/Hello-Compiler/" data-id="cj4xvlry60003qqihre6xszwu" class="article-share-link">分享</a><div class="tags"></div><div class="post-nav"><a href="/MarkDown语法记录/" class="next">MarkDown语法记录</a></div><div class="post-donate"><div id="donate_board" class="donate_bar center"><a id="btn_donate" href="javascript:;" title="打赏" class="btn_donate"></a><div class="donate_txt"> &uarr;<br>此文有用？求鼓励<br></div></div><div id="donate_guide" class="donate_bar center hidden"><img src="https://Jarvis-K.github.io/donate-page/simple/images/WeChanQR.png" title="微信打赏"></div><script type="text/javascript">document.getElementById('btn_donate').onclick = function(){
+<h2 id="初步了解编译的过程"><a href="#初步了解编译的过程" class="headerlink" title="初步了解编译的过程"></a>初步了解编译的过程</h2><p>这篇博客参考紫龙书。过程如下图所示<br><img src="/Hello-Compiler/process.png" alt="process"><br>整体上可分为2个部分前端(又称为analysis)和后端(又称为synthesis)，其中词法，语法，语义分析为前端部分，而剩余部分为后端。</p>
+<h1 id="词法分析"><a href="#词法分析" class="headerlink" title="词法分析"></a>词法分析</h1><p>INPUT:字符串流(即源代码),(已知的词法规则)<br>GET：TOKEN流(即一个个词法单元)</p>
+<h2 id="表示词法规则"><a href="#表示词法规则" class="headerlink" title="表示词法规则"></a>表示词法规则</h2><p>我们固然可以用自然语言来表示，但这并不易于计算机处理，于是很自然的想到了正则表达式。这里简单提一下正则的几个实例   </p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\epsilon$</td>
+<td>空字符串</td>
+</tr>
+<tr>
+<td>a\</td>
+<td>b</td>
+<td>a或b</td>
+</tr>
+<tr>
+<td>a*</td>
+<td>0个或多个a</td>
+</tr>
+<tr>
+<td>[abc]</td>
+<td>a\</td>
+<td>b\</td>
+<td>c</td>
+</tr>
+<tr>
+<td>.</td>
+<td>所有的单字符</td>
+</tr>
+<tr>
+<td>X？</td>
+<td>X或者$\epsilon$</td>
+</tr>
+<tr>
+<td>[^ab]</td>
+<td>除去a和b以外的所有单个字符</td>
+</tr>
+<tr>
+<td>X+</td>
+<td>1个或多个X</td>
+</tr>
+<tr>
+<td>[a-z]</td>
+<td>表示a到z的所有单个字母</td>
+</tr>
+</tbody>
+</table>
+<p>一般需要用到的也就这些了。<code>id-&gt;[a-z][a-z0-9]*</code>为只支持字母开头且其他字符只能为字母或者数字的标识符的正则定义。确实现在的高级语言诸如java等都支持正则匹配，但是通常正则匹配的效率并不够高，尤其是对于编译来说。因而我们需要使用其他方式来解析源代码</p>
+<p>##使用自动机<br>自动机说起来很厉害，但其实也就是一个状态转换图(也可能是我没有理解到自动机的真谛），自动机分为DFA(Determinitic finite automation)和NFA（Nondeterministic finite automation）两种。正则表达式，DFA，NFA之间可进行互相转换。</p>
+<table>
+<thead>
+<tr>
+<th>DFA</th>
+<th>NFA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>确定有限状态自动机</td>
+<td>非确定有限状态自动机</td>
+</tr>
+<tr>
+<td>对于输入一种符号，唯一对应下一个状态</td>
+<td>对于一个输入符号，可能有几个状态对应</td>
+</tr>
+<tr>
+<td>不需要回溯</td>
+<td>需要回溯</td>
+</tr>
+</tbody>
+</table>
+<p>所以我们一般采用DFA来解析源程序。龙书中这一部分包含了<a href="https://zh.wikipedia.org/wiki/Thompson%E6%9E%84%E9%80%A0%E6%B3%95" target="_blank" rel="external">Tompson构造法</a>，<a href="http://blog.163.com/it_novice/blog/static/2091830692013465450493/" target="_blank" rel="external">NFA转DFA</a>等，这里为了偷懒，就略去了，因为其实我们是可以直接从正则表达式转换DFA的。</p>
+<p>###正则表达式转DFA<br>首先是两个非常关键的函数</p>
+<table>
+<thead>
+<tr>
+<th>firstpos()</th>
+<th>followpos()</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://yoursite.com/Hello-Compiler/" data-id="cj4y2gkjw0003j6ih7xd4ml9t" class="article-share-link">分享</a><div class="tags"></div><div class="post-nav"><a href="/MarkDown语法记录/" class="next">MarkDown语法记录</a></div><div class="post-donate"><div id="donate_board" class="donate_bar center"><a id="btn_donate" href="javascript:;" title="打赏" class="btn_donate"></a><div class="donate_txt"> &uarr;<br>此文有用？求鼓励<br></div></div><div id="donate_guide" class="donate_bar center hidden"><img src="https://Jarvis-K.github.io/donate-page/simple/images/WeChanQR.png" title="微信打赏"></div><script type="text/javascript">document.getElementById('btn_donate').onclick = function(){
     $('#donate_board').addClass('hidden');
     $('#donate_guide').removeClass('hidden');
 }</script></div><div id="container"></div><link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"><script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script><script>var gitment = new Gitment({
