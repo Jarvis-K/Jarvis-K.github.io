@@ -84,21 +84,9 @@
 </tbody>
 </table>
 <p>所以我们一般采用DFA来解析源程序。龙书中这一部分包含了<a href="https://zh.wikipedia.org/wiki/Thompson%E6%9E%84%E9%80%A0%E6%B3%95" target="_blank" rel="external">Tompson构造法</a>，<a href="http://blog.163.com/it_novice/blog/static/2091830692013465450493/" target="_blank" rel="external">NFA转DFA</a>等，这里为了偷懒，就略去了，因为其实我们是可以直接从正则表达式转换DFA的。</p>
-<p>###正则表达式转DFA<br>首先是两个非常关键的函数</p>
-<table>
-<thead>
-<tr>
-<th>firstpos()</th>
-<th>followpos()</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://yoursite.com/Hello-Compiler/" data-id="cj4y2gkjw0003j6ih7xd4ml9t" class="article-share-link">分享</a><div class="tags"></div><div class="post-nav"><a href="/MarkDown语法记录/" class="next">MarkDown语法记录</a></div><div class="post-donate"><div id="donate_board" class="donate_bar center"><a id="btn_donate" href="javascript:;" title="打赏" class="btn_donate"></a><div class="donate_txt"> &uarr;<br>此文有用？求鼓励<br></div></div><div id="donate_guide" class="donate_bar center hidden"><img src="https://Jarvis-K.github.io/donate-page/simple/images/WeChanQR.png" title="微信打赏"></div><script type="text/javascript">document.getElementById('btn_donate').onclick = function(){
+<p>###正则表达式转DFA<br>首先是两个非常关键的函数<br>firstpos(root): 合理的第一个字符的集合。<br>follwpos(n):第n位之后合理的第一个字符的集合。<br>操作过程是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">Dstates=&#123;&#125;</div><div class="line">在末尾加一个终结符#，按顺序从1开始给所有终结符标号。</div><div class="line">计算所有的fllowpos，计算firstpos(root)。</div><div class="line">S0=firstpos(root)，将S0加入Dstates;</div><div class="line">while(Dstates中有未标记的状态)&#123;</div><div class="line">	取出未标记的状态Sk；</div><div class="line">	for(每个输入符号）&#123;</div><div class="line">		U=Sk中和a对应的所有位置p的fllowpos(p)的并集；</div><div class="line">		if(U不在Dstates中)</div><div class="line">			将U加入Dstates;</div><div class="line">		Dtran[S,a]=U;</div><div class="line">	&#125;	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://yoursite.com/Hello-Compiler/" data-id="cj4yvt2by0003bkihxwz14qga" class="article-share-link">分享</a><div class="tags"></div><div class="post-nav"><a href="/MarkDown语法记录/" class="next">MarkDown语法记录</a></div><div class="post-donate"><div id="donate_board" class="donate_bar center"><a id="btn_donate" href="javascript:;" title="打赏" class="btn_donate"></a><div class="donate_txt"> &uarr;<br>此文有用？求鼓励<br></div></div><div id="donate_guide" class="donate_bar center hidden"><img src="https://Jarvis-K.github.io/donate-page/simple/images/WeChanQR.png" title="微信打赏"></div><script type="text/javascript">document.getElementById('btn_donate').onclick = function(){
     $('#donate_board').addClass('hidden');
     $('#donate_guide').removeClass('hidden');
 }</script></div><div id="container"></div><link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"><script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script><script>var gitment = new Gitment({
