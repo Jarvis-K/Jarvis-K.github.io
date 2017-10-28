@@ -1,26 +1,43 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>MarkDown语法记录 | 欢迎加入绿灯军团</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="/css/donate.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/6.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.2/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.2/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">MarkDown语法记录</h1><a id="logo" href="/.">欢迎加入绿灯军团</a><p class="description"></p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/guestbook/"><i class="fa fa-comments"> 留言</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">MarkDown语法记录</h1><div class="post-meta">Jul 6, 2017<script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> 阅读</span></span></div><div class="clear"><div id="toc" class="toc-article"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#基础用法"><span class="toc-number">1.</span> <span class="toc-text">基础用法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#标题与换行"><span class="toc-number">1.1.</span> <span class="toc-text">标题与换行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#强调"><span class="toc-number">1.2.</span> <span class="toc-text">强调</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#链接与邮件地址"><span class="toc-number">1.3.</span> <span class="toc-text">链接与邮件地址</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图片"><span class="toc-number">1.4.</span> <span class="toc-text">图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#列表"><span class="toc-number">1.5.</span> <span class="toc-text">列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#块引用"><span class="toc-number">1.6.</span> <span class="toc-text">块引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码块"><span class="toc-number">1.7.</span> <span class="toc-text">代码块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分割线"><span class="toc-number">1.8.</span> <span class="toc-text">分割线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#块格式化"><span class="toc-number">1.9.</span> <span class="toc-text">块格式化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#表格"><span class="toc-number">1.9.1.</span> <span class="toc-text">表格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码语法高亮"><span class="toc-number">1.9.2.</span> <span class="toc-text">代码语法高亮</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数学语法"><span class="toc-number">2.</span> <span class="toc-text">数学语法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#插入"><span class="toc-number">2.1.</span> <span class="toc-text">插入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#特殊符号"><span class="toc-number">2.2.</span> <span class="toc-text">特殊符号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#上下标"><span class="toc-number">2.3.</span> <span class="toc-text">上下标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分数"><span class="toc-number">2.4.</span> <span class="toc-text">分数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#希腊字母"><span class="toc-number">2.5.</span> <span class="toc-text">希腊字母</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他字符"><span class="toc-number">2.6.</span> <span class="toc-text">其他字符</span></a></li></ol></li></ol></div></div><div class="post-content"><p>初次尝试markdown<br><a id="more"></a></p>
-<h1 id="基础用法"><a href="#基础用法" class="headerlink" title="基础用法"></a>基础用法</h1><h2 id="标题与换行"><a href="#标题与换行" class="headerlink" title="标题与换行"></a>标题与换行</h2><p>标题使用<code>#</code>表示，个数表示层级<br>换行注意在前一行末尾加2个空格</p>
-<h2 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h2><p>使用<code>*A*</code>表示斜体，<em>Hello</em>.<br>使用<code>**A**</code>表示加粗，<strong>Hello</strong></p>
-<h2 id="链接与邮件地址"><a href="#链接与邮件地址" class="headerlink" title="链接与邮件地址"></a>链接与邮件地址</h2><ol>
-<li><code>&lt;https://www.google.com&gt;</code>表示 <a href="https://www.google.com" target="_blank" rel="external">https://www.google.com</a>  </li>
-<li><code>[G](https://www.google.com)</code>表示<a href="https://www.google.com" target="_blank" rel="external">G</a>  </li>
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>MarkDown语法记录 | 欢迎加入绿灯军团</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="/css/donate.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/6.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.2/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.2/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">MarkDown语法记录</h1><a id="logo" href="/.">欢迎加入绿灯军团</a><p class="description"></p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/guestbook/"><i class="fa fa-comments"> 留言</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">MarkDown语法记录</h1><div class="post-meta">Jul 6, 2017<script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> 阅读</span></span></div><div class="clear"><div id="toc" class="toc-article"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">基础用法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.</span> <span class="toc-text">标题与换行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.2.</span> <span class="toc-text">强调</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.3.</span> <span class="toc-text">链接与邮件地址</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.4.</span> <span class="toc-text">图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.5.</span> <span class="toc-text">列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.6.</span> <span class="toc-text">块引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.7.</span> <span class="toc-text">代码块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.8.</span> <span class="toc-text">分割线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.9.</span> <span class="toc-text">块格式化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.9.1.</span> <span class="toc-text">表格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.9.2.</span> <span class="toc-text">代码语法高亮</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">数学语法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.1.</span> <span class="toc-text">插入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.2.</span> <span class="toc-text">特殊符号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.3.</span> <span class="toc-text">上下标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.4.</span> <span class="toc-text">分数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.5.</span> <span class="toc-text">希腊字母</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.6.</span> <span class="toc-text">其他字符</span></a></li></ol></li></ol></div></div><div class="post-content"><p>初次尝试markdown
+&lt;!-- more --&gt;</p>
+<h1>基础用法</h1>
+<h2>标题与换行</h2>
+<p>标题使用<code>#</code>表示，个数表示层级<br>
+换行注意在前一行末尾加2个空格</p>
+<h2>强调</h2>
+<p>使用<code>*A*</code>表示斜体，<em>Hello</em>.<br>
+使用<code>**A**</code>表示加粗，<strong>Hello</strong></p>
+<h2>链接与邮件地址</h2>
+<ol>
+<li><code>&lt;https://www.google.com&gt;</code>表示 <a href="https://www.google.com" target="_blank" rel="external">https://www.google.com</a></li>
+<li><code>[G](https://www.google.com)</code>表示<a href="https://www.google.com" target="_blank" rel="external">G</a></li>
 <li>使用引用<code>[G][Google]</code>然后声明<code>[Google]: https://www.google.com</code>与2结果相同</li>
 <li>使用<code>[G][]</code>然后在其他位置声明<code>[G]: https://www.google.com</code>与3一致</li>
 </ol>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>使用<code>![image](test1.jpg)</code>表示<br><img src="/MarkDown语法记录/test1.jpg" alt="image"><br>其中<code>image</code>可省去；拓展方式与链接相同</p>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>一般使用<code>*List1</code>表示无序列表，使用<code>1. List1</code>表示有序</p>
-<h2 id="块引用"><a href="#块引用" class="headerlink" title="块引用"></a>块引用</h2><p>使用<code>&gt; Str</code>做块引用，可嵌套。下面给出一个例子</p>
+<h2>图片</h2>
+<p>使用<code>![image](test1.jpg)</code>表示
+<img src="/MarkDown语法记录/MarkDown%E8%AF%AD%E6%B3%95%E8%AE%B0%E5%BD%95/test1.jpg" alt="image"><br>
+其中<code>image</code>可省去；拓展方式与链接相同</p>
+<h2>列表</h2>
+<p>一般使用<code>*List1</code>表示无序列表，使用<code>1. List1</code>表示有序</p>
+<h2>块引用</h2>
+<p>使用<code>&gt; Str</code>做块引用，可嵌套。下面给出一个例子</p>
 <blockquote>
 <p>鲁迅说过</p>
 <blockquote>
 <p>搬砖救不了中国人</p>
 </blockquote>
 </blockquote>
-<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>使用<br><code>`str` </code> 或者更多<code>` </code>等做代码块引用，也可用四个空格或者一个TAB引用多行代码块</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">  </div><div class="line">print(&apos;Hello&apos;)  </div><div class="line">print(&apos;World&apos;)	</div></pre></td></tr></table></figure>
-<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><p>使用<code>***</code>产生一行分割线见下</p>
+<h2>代码块</h2>
+<p>使用
+<code>`str`</code> 或者更多<code>`</code>等做代码块引用，也可用四个空格或者一个TAB引用多行代码块</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">  </div><div class="line">print(&apos;Hello&apos;)  </div><div class="line">print(&apos;World&apos;)	</div></pre></td></tr></table></figure></p>
+<h2>分割线</h2>
+<p>使用<code>***</code>产生一行分割线见下</p>
 <hr>
-<h2 id="块格式化"><a href="#块格式化" class="headerlink" title="块格式化"></a>块格式化</h2><h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><p>举个栗子  </p>
+<h2>块格式化</h2>
+<h3>表格</h3>
+<p>举个栗子</p>
 <table>
 <thead>
 <tr>
@@ -40,17 +57,30 @@
 </tbody>
 </table>
 <p>的代码是</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Type A  | Type B</div><div class="line">------- | -------</div><div class="line">12 | 1</div><div class="line">1218379  | 12</div></pre></td></tr></table></figure>
-<h3 id="代码语法高亮"><a href="#代码语法高亮" class="headerlink" title="代码语法高亮"></a>代码语法高亮</h3><p>使用<code>~</code>类似与<code>` </code>的用法声明语言<br>举个栗子</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">foo=(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</div><div class="line"><span class="keyword">print</span> (foo)</div></pre></td></tr></table></figure>
-<p>代码为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;% codeblock lang:python %&#125;</div><div class="line">foo=(1,2,3)</div><div class="line">print (foo)</div><div class="line">&#123;% endcodeblock %&#125;</div></pre></td></tr></table></figure>
-<h1 id="数学语法"><a href="#数学语法" class="headerlink" title="数学语法"></a>数学语法</h1><h2 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h2><p>行内使用<code>$str$</code>,块使用<code>$$str$$</code>。举个例子<br>$$x=100*y+z-19/22+100\%2$$</p>
-<h2 id="特殊符号"><a href="#特殊符号" class="headerlink" title="特殊符号"></a>特殊符号</h2><p>空格：<code>\Space</code>  &ensp; $:<code>\$</code>&ensp;  %:<code>\%</code>&ensp;<br>{:<code>\lbrace</code>&ensp; }:<code>\rbrace</code>&ensp;</p>
-<h2 id="上下标"><a href="#上下标" class="headerlink" title="上下标"></a>上下标</h2><p><code>^</code>表示上标，<code>_</code>表示下标。如果字符多于一个用<code>{}</code>来当成整体</p>
-<h2 id="分数"><a href="#分数" class="headerlink" title="分数"></a>分数</h2><p>两种写法<code>\frac{分子}{分母}</code>更小，<code>\cfrac{分子}{分母}</code>较大。比较见下（左边为frac右边为cfrac）<br>$$\frac{1}{3}与\cfrac{1}{3}$$</p>
-<p>##开方<br>使用<code>\sqrt[次数]{被开方数}</code>表示开方。栗子见下<br>$$\sqrt[3]{x}$$</p>
-<h2 id="希腊字母"><a href="#希腊字母" class="headerlink" title="希腊字母"></a>希腊字母</h2><table>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Type A  | Type B</div><div class="line">------- | -------</div><div class="line">12 | 1</div><div class="line">1218379  | 12</div></pre></td></tr></table></figure></p>
+<h3>代码语法高亮</h3>
+<p>使用<code>~</code>类似与<code>`</code>的用法声明语言<br>
+举个栗子</p>
+<p><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">foo=(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</div><div class="line"><span class="keyword">print</span> (foo)</div></pre></td></tr></table></figure>
+代码为</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;% codeblock lang:python %&#125;</div><div class="line">foo=(1,2,3)</div><div class="line">print (foo)</div><div class="line">&#123;% endcodeblock %&#125;</div></pre></td></tr></table></figure></p>
+<h1>数学语法</h1>
+<h2>插入</h2>
+<p>行内使用<code>$str$</code>,块使用<code>$$str$$</code>。举个例子
+$$x=100*y+z-19/22+100%2$$</p>
+<h2>特殊符号</h2>
+<p>空格：<code>\Space</code>    $:<code>\$</code>   %:<code>\%</code> 
+{:<code>\lbrace</code>  }:<code>\rbrace</code> </p>
+<h2>上下标</h2>
+<p><code>^</code>表示上标，<code>_</code>表示下标。如果字符多于一个用<code>{}</code>来当成整体</p>
+<h2>分数</h2>
+<p>两种写法<code>\frac{分子}{分母}</code>更小，<code>\cfrac{分子}{分母}</code>较大。比较见下（左边为frac右边为cfrac）
+$$\frac{1}{3}与\cfrac{1}{3}$$</p>
+<p>##开方
+使用<code>\sqrt[次数]{被开方数}</code>表示开方。栗子见下
+$$\sqrt[3]{x}$$</p>
+<h2>希腊字母</h2>
+<table>
 <thead>
 <tr>
 <th>代码</th>
@@ -206,8 +236,10 @@
 </tr>
 </tbody>
 </table>
-<h2 id="其他字符"><a href="#其他字符" class="headerlink" title="其他字符"></a>其他字符</h2><p>内容包括关系运算符，集合运算符，对数，三角以及微积分运算符。<br>见<a href="http://jzqt.github.io/2015/06/30/Markdown%E4%B8%AD%E5%86%99%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/" target="_blank" rel="external">Markdown中写数学公式</a></p>
-</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="https://jarvis-k.github.io/MarkDown语法记录/" data-id="cj9axlhk10003lrihnig8la16" class="article-share-link">分享</a><div class="tags"></div><div class="post-nav"><a href="/共轭梯度法-QR分解法/" class="pre">共轭梯度法&amp;QR分解法</a><a href="/hello-world/" class="next">Hello World</a></div><div class="post-donate"><div id="donate_board" class="donate_bar center"><a id="btn_donate" href="javascript:;" title="打赏" class="btn_donate"></a><div class="donate_txt"> &uarr;<br>此文有用？求鼓励<br></div></div><div id="donate_guide" class="donate_bar center hidden"><img src="https://Jarvis-K.github.io/donate-page/simple/images/WeChanQR.png" title="微信打赏"></div><script type="text/javascript">document.getElementById('btn_donate').onclick = function(){
+<h2>其他字符</h2>
+<p>内容包括关系运算符，集合运算符，对数，三角以及微积分运算符。<br>
+见<a href="http://jzqt.github.io/2015/06/30/Markdown%E4%B8%AD%E5%86%99%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/" target="_blank" rel="external">Markdown中写数学公式</a></p>
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="https://jarvis-k.github.io/MarkDown语法记录/" data-id="cj9axoqfc0004meihd6iaxkst" class="article-share-link">分享</a><div class="tags"></div><div class="post-nav"><a href="/共轭梯度法-QR分解法/" class="pre">共轭梯度法&amp;QR分解法</a><a href="/hello-world/" class="next">Hello World</a></div><div class="post-donate"><div id="donate_board" class="donate_bar center"><a id="btn_donate" href="javascript:;" title="打赏" class="btn_donate"></a><div class="donate_txt"> &uarr;<br>此文有用？求鼓励<br></div></div><div id="donate_guide" class="donate_bar center hidden"><img src="https://Jarvis-K.github.io/donate-page/simple/images/WeChanQR.png" title="微信打赏"></div><script type="text/javascript">document.getElementById('btn_donate').onclick = function(){
     $('#donate_board').addClass('hidden');
     $('#donate_guide').removeClass('hidden');
 }</script></div><div id="container"></div><link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"><script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script><script>var gitment = new Gitment({
