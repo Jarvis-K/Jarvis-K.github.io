@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>DL初级数学基础 | 欢迎加入绿灯军团</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="/css/donate.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/6.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.2/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.2/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">DL初级数学基础</h1><a id="logo" href="/.">欢迎加入绿灯军团</a><p class="description"></p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/guestbook/"><i class="fa fa-comments"> 留言</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">DL初级数学基础</h1><div class="post-meta">May 18, 2018<script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> 阅读</span></span></div><div class="clear"><div id="toc" class="toc-article"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">线性代数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.</span> <span class="toc-text">向量点积（dot product）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.2.</span> <span class="toc-text">矩阵乘法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.3.</span> <span class="toc-text">特征值与特征向量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.4.</span> <span class="toc-text">奇异值分解（SVD）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.5.</span> <span class="toc-text">卷积</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.5.1.</span> <span class="toc-text">一维卷积</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.5.2.</span> <span class="toc-text">二维卷积</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.5.3.</span> <span class="toc-text">实现方式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">概率论</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">优化理论</span></a></li></ol></div></div><div class="post-content"><p>准备系统的学习下与CV相关的方向，因此买了本《深度学习与计算机视觉》，搁置了很久，现在拾起看了起来，仅以此文记录自己的学习历程以及起到笔记的作用。</p>
+<h1>线性代数</h1>
+<p>这里就忽略基础的向量，矩阵等的部分了，主要介绍所涉及到的相关计算</p>
+<h2>向量点积（dot product）</h2>
+<ol>
+<li>代数定义：$\vec{a} \cdot \vec{b}=\sum_{i=1}^{n}a_i b_i$</li>
+<li>几何理解：$\vec{a} \cdot \vec{b}=|\vec{a}| |\vec{b}| cos\theta$即表示a与b在a上的投影的乘积。</li>
+</ol>
+<h2>矩阵乘法</h2>
+<ol>
+<li>代数定义：$(AB)<em>{ij}=\sum</em>{r=1}^n a_{ir}b_{rj}$</li>
+<li>投影角度理解：$Ax$可以理解成将原始坐标系经矩阵A变换后得到新坐标系B，再将原来的点投影到新坐标系的每个轴上，即得到在新坐标系中的坐标</li>
+<li>坐标映射角度理解：$AB$可以理解为对B区域内的所有点，进行A变换（可理解成旋转和放缩两种，参照SVD）。</li>
+</ol>
+<h2>特征值与特征向量</h2>
+<ol>
+<li>代数定义：$Ax=\lambda x$其中x为A矩阵的特征向量，而$\lambda$为A矩阵关于x向量的特征值。即特征向量表示经过矩阵A变换后，其方向不变的向量。</li>
+<li>几何理解：我们前面提到一个矩阵A变换可以理解成旋转+放缩，其中实数特征值表示伸缩，虚数表示旋转，而特征向量表示放缩/旋转的方向。</li>
+<li>正定情况：由于我们在机器学习中遇到的一般都是正定矩阵（即对任意向量x，$x^TAx&gt;0$恒成立），且它拥有很好的性质（特征向量正交，且存在可逆阵）。对于一个正定矩阵变换，我们可以看成将空间中的点沿特征向量方向伸缩（伸缩比例特征值相关）。</li>
+</ol>
+<h2>奇异值分解（SVD）</h2>
+<ol>
+<li>代数定义：$M=U\sum V^T$,其中$\sum$是一个对角阵，U，V为正交矩阵。如果M是一个正定矩阵，则U=V</li>
+<li>几何理解：一个变换可以理解成先旋转，再对坐标轴方向进行缩放，再旋转。这三个过程。</li>
+</ol>
+<h2>卷积</h2>
+<h3>一维卷积</h3>
+<ol>
+<li>定义：$(f*g)[n]=\sum_{m=-\infty}^\infty f[m]g[n-m]$</li>
+<li>理解：即将卷积核转过来后（如[1,2,3]就会变成[3,2,1]），不断移位与待卷积信号对应位相乘（可参见下图）</li>
+<li>三种方式：valid（不添加前置0），same（添加前置0，使卷积结果长度等于原信号长度），full（添加0，使对所有点都被卷积）</li>
+</ol>
+<p><img src="/DL初级数学基础/conv1.png" alt="IMAGE"></p>
+<h3>二维卷积</h3>
+<p>与一维卷积类似，但由于一般我们使用的图片的行列数很大，我们一个单位一个单位的移，将导致卷积时间过程，所以我们有时会通过一次移动多个单位来压缩时间，同时也能起到降维的作用。</p>
+<h3>实现方式</h3>
+<ol>
+<li>用<a href="https://blog.csdn.net/andrewseu/article/details/51783181" target="_blank" rel="external">矩阵乘法实现卷积</a>Caffe的默认卷积就是这种</li>
+<li>在频域计算卷积</li>
+</ol>
+<h1>概率论</h1>
+<p>感觉概率论很多都是曾经学过的，这里就简单列一下好了</p>
+<ul>
+<li>期望，方差，协方差</li>
+<li>极大似然（MLE）</li>
+<li>KL散度</li>
+<li>贝叶斯</li>
+</ul>
+<h1>优化理论</h1>
+<p>由于这方面内容确实很多，这里就强推一波 凸优化 (美) 鲍德 (Stephen Boyd) 这本书好了，上学期的凸优化主要也是使用的这本书，感觉是这方面入门比较友善的一本书了。</p>
+<p>这方面具体以后应该会根据优化方法详细来写，Mark，之后再填好了。</p>
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="https://jarvis-k.github.io/DL初级数学基础/" data-id="cjhbysdoy0004haih0xlk1o9k" class="article-share-link">分享</a><div class="tags"><a href="/tags/数学/">数学</a><a href="/tags/DL/">DL</a></div><div class="post-nav"><a href="/542-01-Matrix/" class="next">542 01 Matrix</a></div><div id="container"></div><link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"><script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script><script>var gitment = new Gitment({
+  id: 'DL初级数学基础',
+  owner: 'Jarvis-K',
+  repo: 'Jarvis-K.github.io',
+  oauth: {
+    client_id: 'f5c6bbd5b2ae20c2f136',
+    client_secret: 'fed7dc675f5293f90d56d4055654fb89db9003a8',
+  },
+})
+gitment.render('container')</script></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="https://jarvis-k.github.io"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/LeetCode/" style="font-size: 15px;">LeetCode</a> <a href="/tags/数学/" style="font-size: 15px;">数学</a> <a href="/tags/DL/" style="font-size: 15px;">DL</a> <a href="/tags/数值计算与优化/" style="font-size: 15px;">数值计算与优化</a> <a href="/tags/Util/" style="font-size: 15px;">Util</a> <a href="/tags/随手记/" style="font-size: 15px;">随手记</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/DL初级数学基础/">DL初级数学基础</a></li><li class="post-list-item"><a class="post-list-link" href="/542-01-Matrix/">542 01 Matrix</a></li><li class="post-list-item"><a class="post-list-link" href="/计划与说明/">计划与说明</a></li><li class="post-list-item"><a class="post-list-link" href="/迭代法解线性方程组/">迭代法解线性方程组</a></li><li class="post-list-item"><a class="post-list-link" href="/共轭梯度法-QR分解法/">共轭梯度法&QR分解法</a></li><li class="post-list-item"><a class="post-list-link" href="/MarkDown语法记录/">MarkDown语法记录</a></li><li class="post-list-item"><a class="post-list-link" href="/hello-world/">Hello World</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a href="/." rel="nofollow">欢迎加入绿灯军团.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML" async></script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
