@@ -18,8 +18,8 @@
 <li>按比例缩放，并指定插值方法 <code>cv2.resize(img,(0,0),fx=0.8,fy=0.4,interpolation=cv2.INTER_NEAREST)</code></li>
 </ol>
 <h2>warpAffine</h2>
-<p>仿射变换，即对图像做缩放，旋转，剪切，反转，平移的组合，从而达到矫正图像倾斜的目的。仿射变换的矩阵为2<em>3的矩阵M=[AB]，其中A为2</em>2的矩阵，B为2*1的矩阵。对图像做M仿射变换即对每个点[x,y]
-$$[x1,y1].T=A[x,y].T+B$$
+<p>仿射变换，即对图像做缩放，旋转，剪切，反转，平移的组合，从而达到矫正图像倾斜的目的。仿射变换的矩阵为$2<em>3$的矩阵$M=[AB]$，其中A为2</em>2的矩阵，B为2*1的矩阵。对图像做M仿射变换即对每个点[x,y]
+$$[x_1,y_1].T=A[x,y].T+B$$
 在opencv中我们使用<code>warpAffine</code>方法来完成仿射变换，由于想要自己构造一个合适的矩阵是麻烦的一件事，所以我们使用<code>getAffineTransform</code>传入仿射变换前后的三个点的坐标来获得仿射矩阵。</p>
 <p><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">pts1 = np.float32([[<span class="number">50</span>,<span class="number">50</span>],[<span class="number">200</span>,<span class="number">50</span>],[<span class="number">50</span>,<span class="number">200</span>]])</div><div class="line">pts2 = np.float32([[<span class="number">10</span>,<span class="number">100</span>],[<span class="number">200</span>,<span class="number">50</span>],[<span class="number">100</span>,<span class="number">250</span>]])</div><div class="line">M = cv2.getAffineTransform(pts1,pts2)</div><div class="line"><span class="comment"># （rows,cols）表示仿射变换后的图像大小</span></div><div class="line">res = cv2.warpAffine(img,M,(rows,cols))</div></pre></td></tr></table></figure></p>
 <h2>warpPerspective</h2>
