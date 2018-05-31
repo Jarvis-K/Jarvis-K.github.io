@@ -4,6 +4,25 @@
 
     
   <url>
+    <loc>https://jarvis-k.github.io/python-and-opencv-basics/</loc>
+    <lastmod>2018-05-31T09:53:59.943Z</lastmod>
+    <data>
+        <display>
+        <title>python opencv 基础</title>
+        <pubTime>2018-05-29T13:09:02.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>cv</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://jarvis-k.github.io/mxnet%E4%B8%8Egluon%E5%88%9D%E7%BA%A7%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2018-05-30T07:53:14.337Z</lastmod>
     <data>
@@ -16,25 +35,6 @@
         <tag>mxnet</tag>
          
         <tag>gluon</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://jarvis-k.github.io/python-and-opencv-basics/</loc>
-    <lastmod>2018-05-29T12:11:54.198Z</lastmod>
-    <data>
-        <display>
-        <title>pythonic and opencv basics</title>
-        <pubTime>2018-05-29T13:09:02.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-        <tag>cv</tag>
          
          
            
