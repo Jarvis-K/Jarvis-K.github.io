@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://jarvis-k.github.io/mongodb-%E6%B8%85%E9%99%A4%E7%A3%81%E7%9B%98%E5%8D%A0%E7%94%A8/</loc>
+    <loc>https://jarvis-k.github.io/ML-Introduction/</loc>
     
-    <lastmod>2018-06-06T07:09:34.477Z</lastmod>
+    <lastmod>2018-07-20T13:58:34.420Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jarvis-k.github.io/%E5%85%B1%E8%BD%AD%E6%A2%AF%E5%BA%A6%E6%B3%95-QR%E5%88%86%E8%A7%A3%E6%B3%95/</loc>
+    
+    <lastmod>2018-06-08T17:04:00.854Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://jarvis-k.github.io/mongodb%E4%BD%BF%E7%94%A8join%E5%B9%B6%E7%AE%80%E5%8D%95%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE/</loc>
     
-    <lastmod>2018-06-06T06:35:53.727Z</lastmod>
+    <lastmod>2018-06-06T08:53:54.070Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jarvis-k.github.io/mongodb-%E6%B8%85%E9%99%A4%E7%A3%81%E7%9B%98%E5%8D%A0%E7%94%A8/</loc>
+    
+    <lastmod>2018-06-06T07:09:34.477Z</lastmod>
     
   </url>
   
@@ -96,13 +110,6 @@
     <loc>https://jarvis-k.github.io/MarkDown%E8%AF%AD%E6%B3%95%E8%AE%B0%E5%BD%95/</loc>
     
     <lastmod>2017-10-28T07:00:09.984Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jarvis-k.github.io/%E5%85%B1%E8%BD%AD%E6%A2%AF%E5%BA%A6%E6%B3%95-QR%E5%88%86%E8%A7%A3%E6%B3%95/</loc>
-    
-    <lastmod>2017-10-28T06:56:45.876Z</lastmod>
     
   </url>
   
