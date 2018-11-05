@@ -2,23 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jarvis-k.github.io/Summary-ACM-Learning-Dynamic-Multi-agent-Cooperation-via-Attentional-Commmunication-Model/</loc>
+    
+    <lastmod>2018-11-05T15:06:51.605Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jarvis-k.github.io/Install-tensorflow-gpu-with-CUDA10-0-Guide/</loc>
     
     <lastmod>2018-10-19T05:53:39.512Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jarvis-k.github.io/ML-ModelEvaluation/</loc>
-    
-    <lastmod>2018-07-20T14:17:54.512Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jarvis-k.github.io/ML-Introduction/</loc>
-    
-    <lastmod>2018-07-20T13:58:34.420Z</lastmod>
     
   </url>
   
