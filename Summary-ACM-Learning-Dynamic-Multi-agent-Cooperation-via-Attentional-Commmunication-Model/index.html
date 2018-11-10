@@ -6,9 +6,13 @@
 </ul>
 <h1 id="Approach"><a href="#Approach" class="headerlink" title="Approach"></a>Approach</h1><h2 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h2><p>Use Shared Parameters Partial Observable MarkovDecision Process(SP-POMDP) to describe the multi-agent problem.The model consisits of 10-tuple .</p>
 <h2 id="Framework"><a href="#Framework" class="headerlink" title="Framework"></a>Framework</h2><p>The framework consists CAN and the RL .</p>
-<h3 id="CAN"><a href="#CAN" class="headerlink" title="CAN"></a>CAN</h3><p>It includes <strong>CANR</strong> and <strong>CANM</strong> part.<br><strong>CANR</strong>: the input is $o_t$,then encode with attetion module to get attention $a_t$,so the relation is <script type="math/tex">\mathcal{R}_t^{ij}=softmax(a_t^i-a_t^j)</script></p>
-<p><strong>CANM</strong>: take the $o_i$ and <strong>advantage value</strong>(calculated by policy network) as input,use <strong>TRPO</strong> thought ,the output is nodes for every dimension observation had(i.e. position,speed,and so on). policy network doesn’t update.</p>
-<h3 id="ACM"><a href="#ACM" class="headerlink" title="ACM"></a>ACM</h3><p>The advantage value is calculated as follow:<br>…<br>we first train the policy network,then update the CAN.<br>the final communication is …(waited for the paper images).</p>
+<p><img src="/Summary-ACM-Learning-Dynamic-Multi-agent-Cooperation-via-Attentional-Commmunication-Model/ACM.png" alt=""></p>
+<h3 id="CAN"><a href="#CAN" class="headerlink" title="CAN"></a>CAN</h3><p><img src="/Summary-ACM-Learning-Dynamic-Multi-agent-Cooperation-via-Attentional-Commmunication-Model/CAN.png" alt=""></p>
+<p>It includes <strong>CANR</strong> and <strong>CANM</strong> part.<br><strong>CANR</strong>: the input is $o_t$,then encode with attetion module to get attention $a_t$,so the relation is <script type="math/tex">\mathcal{R}_t^{ij}=softmax(a_t^i-a_t^j)</script></p>
+<p><strong>CANM</strong>: take the $o_i$ and <strong>advantage value</strong>(calculated by policy network) as input,use <strong>TRPO</strong> thought ,the output is nodes for every dimension observation had(i.e. position,speed,and so on). policy network doesn’t update.<br><img src="/Summary-ACM-Learning-Dynamic-Multi-agent-Cooperation-via-Attentional-Commmunication-Model/CANM.png" alt=""></p>
+<p><img src="/Summary-ACM-Learning-Dynamic-Multi-agent-Cooperation-via-Attentional-Commmunication-Model/algo1.png" alt=""></p>
+<h3 id="ACM"><a href="#ACM" class="headerlink" title="ACM"></a>ACM</h3><p>The advantage value is calculated as follow:<br><img src="/Summary-ACM-Learning-Dynamic-Multi-agent-Cooperation-via-Attentional-Commmunication-Model/eq1.png" alt=""><br>we first train the policy network,then update the CAN.</p>
+<p><img src="/Summary-ACM-Learning-Dynamic-Multi-agent-Cooperation-via-Attentional-Commmunication-Model/algo2.png" alt=""></p>
 <h1 id="Experiments"><a href="#Experiments" class="headerlink" title="Experiments"></a>Experiments</h1><ul>
 <li>In <strong>Pursuit</strong> scene(action space is discrete),ACM is more efficient than others.</li>
 <li>In <strong>Coordinating Bipedal Walkers</strong>(continuous action space and complex state space ),ACM  is more sutable.</li>
