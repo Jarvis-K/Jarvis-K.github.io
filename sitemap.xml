@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://jarvis-k.github.io/Summary-Actor-Attention-Critic-For-Multi-Agent-Reinforcement-Learning/</loc>
+    <loc>https://jarvis-k.github.io/Summary-Intrinsic-Social-Motivation-Via-Causal-Influence-In-Multi-Agent-RL/</loc>
     
-    <lastmod>2018-11-07T06:38:06.003Z</lastmod>
+    <lastmod>2018-11-10T03:59:17.054Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://jarvis-k.github.io/Summary-Learning-Attentional-Communication-for-Multi-Agent-Cooperation/</loc>
     
-    <lastmod>2018-11-06T09:22:08.726Z</lastmod>
+    <lastmod>2018-11-08T07:23:31.604Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jarvis-k.github.io/Summary-Actor-Attention-Critic-For-Multi-Agent-Reinforcement-Learning/</loc>
+    
+    <lastmod>2018-11-07T06:38:06.003Z</lastmod>
     
   </url>
   
